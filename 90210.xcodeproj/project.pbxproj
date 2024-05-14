@@ -146,8 +146,7 @@
 				404AF6C22BF2ADD9007DCD7D /* Reusable */,
 				404AF6C42BF2ADD9007DCD7D /* TestController */,
 			);
-			name = View;
-			path = ../../TestN/TestN/View;
+			path = View;
 			sourceTree = "<group>";
 		};
 		404AF6B22BF2ADD9007DCD7D /* ListOfMarsCameras */ = {
