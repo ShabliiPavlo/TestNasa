@@ -42,6 +42,7 @@
 		404AF6F82BF2ADDA007DCD7D /* RealmFilterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404AF6DB2BF2ADDA007DCD7D /* RealmFilterModel.swift */; };
 		404AF6F92BF2ADDA007DCD7D /* RealmItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404AF6DC2BF2ADDA007DCD7D /* RealmItemModel.swift */; };
 		404AF6FA2BF2ADDA007DCD7D /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404AF6DD2BF2ADDA007DCD7D /* NetworkModel.swift */; };
+		40CC7ED22BF35D170068F633 /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CC7ED12BF35D170068F633 /* ImageScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		404AF6DC2BF2ADDA007DCD7D /* RealmItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmItemModel.swift; sourceTree = "<group>"; };
 		404AF6DD2BF2ADDA007DCD7D /* NetworkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
 		404AF6DE2BF2ADDA007DCD7D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40CC7ED12BF35D170068F633 /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +278,7 @@
 				404AF6D92BF2ADDA007DCD7D /* NasaResponseModel.swift */,
 				404AF6DA2BF2ADDA007DCD7D /* Realm */,
 				404AF6DD2BF2ADDA007DCD7D /* NetworkModel.swift */,
+				40CC7ED12BF35D170068F633 /* ImageScrollView.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				404AF6F92BF2ADDA007DCD7D /* RealmItemModel.swift in Sources */,
 				404AF6F62BF2ADDA007DCD7D /* HostoryCellModel.swift in Sources */,
 				404AF6E92BF2ADDA007DCD7D /* ViewPhotoViewController.swift in Sources */,
+				40CC7ED22BF35D170068F633 /* ImageScrollView.swift in Sources */,
 				404AF6E32BF2ADDA007DCD7D /* MarsDataTableViewCell.swift in Sources */,
 				404AF6EA2BF2ADDA007DCD7D /* TitleLabel.swift in Sources */,
 				404AF6E12BF2ADDA007DCD7D /* ListOfMarsCamerasViewController.swift in Sources */,

@@ -206,38 +206,9 @@
                     <view key="view" contentMode="scaleToFill" id="VOW-g6-9dv">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tzf-Kn-9V3">
-                                <rect key="frame" x="0.0" y="109" width="393" height="709"/>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5L-Mh-96O">
-                                <rect key="frame" x="20" y="79" width="30" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="kU7-F8-8W8"/>
-                                    <constraint firstAttribute="width" constant="30" id="v4r-XR-4at"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="closeWhight"/>
-                                <connections>
-                                    <action selector="close:" destination="1Wx-nr-VKG" eventType="touchUpInside" id="GTl-c8-ifc"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="NJ4-wQ-AaM"/>
                         <color key="backgroundColor" name="layerOne"/>
-                        <constraints>
-                            <constraint firstItem="C5L-Mh-96O" firstAttribute="top" secondItem="NJ4-wQ-AaM" secondAttribute="top" constant="20" id="1Ec-NO-zUJ"/>
-                            <constraint firstItem="C5L-Mh-96O" firstAttribute="leading" secondItem="NJ4-wQ-AaM" secondAttribute="leading" constant="20" id="9nP-n6-33R"/>
-                            <constraint firstItem="Tzf-Kn-9V3" firstAttribute="top" secondItem="C5L-Mh-96O" secondAttribute="bottom" id="DhY-cO-gXt"/>
-                            <constraint firstItem="Tzf-Kn-9V3" firstAttribute="leading" secondItem="NJ4-wQ-AaM" secondAttribute="leading" id="bku-GA-gcy"/>
-                            <constraint firstItem="Tzf-Kn-9V3" firstAttribute="trailing" secondItem="NJ4-wQ-AaM" secondAttribute="trailing" id="ryQ-I1-mR8"/>
-                            <constraint firstItem="Tzf-Kn-9V3" firstAttribute="bottom" secondItem="NJ4-wQ-AaM" secondAttribute="bottom" id="uOw-bC-EbH"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="marsPhoto" destination="Tzf-Kn-9V3" id="9Zb-T9-BrY"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sdc-zZ-6iD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -246,7 +217,6 @@
     </scenes>
     <resources>
         <image name="close" width="44" height="44"/>
-        <image name="closeWhight" width="44" height="44"/>
         <image name="history" width="44" height="44"/>
         <image name="tick" width="44" height="44"/>
         <namedColor name="accentOne">
