@@ -1,6 +1,7 @@
 
 import Foundation
 import Combine
+import DataCache
 
 protocol ListOfMarsCamerasViewModelProtocol: AnyObject {
     func filterCameraButtonTapped()
@@ -41,6 +42,23 @@ class ListOfMarsCamerasViewModel {
     func saveHistorFilter() {
         realmManager.createObject(RealmFilterModel(roverType: rover, cameraType: camera, date: date ?? "date error"))
     }
+    
+    func getImage(index: Int) async throws -> Data? {
+            let item = nasaManagerData[index]
+
+            if let data = DataCache.instance.readData(forKey: item.imgSrc) {
+                return data
+            } else {
+                do {
+                    let imageData = try await networkManage.loadImageData(item: item.imgSrc)
+                    DataCache.instance.write(data: imageData, forKey: item.imgSrc)
+                    return imageData
+                } catch {
+                    throw NetworkError.custome(error.localizedDescription)
+                }
+
+            }
+        }
     
 }
 

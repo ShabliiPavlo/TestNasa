@@ -16,10 +16,14 @@ class MarsDataTableViewCell: UITableViewCell {
         setupUI()
     }
     
-    func configureWith(imageData:String) {
-        let posterURL = URL(string: imageData)
-        imageViewCell.sd_setImage(with: posterURL)
-    }
+    func configureWith(imageData: Data?) {
+            guard let imageData = imageData else {
+                return
+            }
+            DispatchQueue.main.async {
+                self.imageViewCell.image = UIImage(data: imageData)
+            }
+        }
     
     func hostoryCellConfig(model: HostoryCellModel) {
         rover.text = model.rover

@@ -335,7 +335,11 @@ extension ListOfMarsCamerasViewController: UITableViewDataSource {
         let roverData = viewModel.nasaManagerData[indexPath.row].rover.name
         let dayData = viewModel.nasaManagerData[indexPath.row].earthDate
         let cameraData = viewModel.nasaManagerData[indexPath.row].camera.fullName
-        cell.configureWith(imageData: imageURL)
+        Task {
+                    if let imageDat = try await viewModel.getImage(index: indexPath.row) {
+                        cell.configureWith(imageData: imageDat)
+                    }
+                }
         cell.configureOtherCell(roverName: roverData, day: dayData, cameraName: cameraData)
         return cell
     }

@@ -29,4 +29,14 @@ class NetworkManager {
             }
         }
     }
+    
+    func loadImageData(item: String) async throws -> Data {
+            guard let url = URL(string: item) else { throw NetworkError.imageLoadingError }
+            do {
+                let (data,_) = try await URLSession.shared.data(from: url)
+                return data
+            } catch {
+                throw NetworkError.custome(error.localizedDescription)
+            }
+        }
 }
