@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--List Of Mars Cameras View Controller-->
+        <scene sceneID="T5l-JL-mKL">
+            <objects>
+                <viewController storyboardIdentifier="ListOfMarsCamerasViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="68T-gw-3fP" customClass="ListOfMarsCamerasViewController" customModule="_0210" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DUn-DN-iUk">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TJP-Zf-XoW">
+                                <rect key="frame" x="0.0" y="187.33333333333331" width="393" height="664.66666666666674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="68T-gw-3fP" id="aXI-gi-EC9"/>
+                                    <outlet property="delegate" destination="68T-gw-3fP" id="F7n-8r-mcB"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iap-NZ-0Dr">
+                                <rect key="frame" x="303" y="728" width="70" height="70"/>
+                                <color key="backgroundColor" name="accentOne"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="43Q-gv-hBf"/>
+                                    <constraint firstAttribute="width" constant="70" id="SV9-xP-y1V"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="history"/>
+                                <connections>
+                                    <action selector="historyButtonPress:" destination="68T-gw-3fP" eventType="touchUpInside" id="5tz-Yx-i90"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EIf-dA-kP7">
+                                <rect key="frame" x="20" y="270" width="353" height="312"/>
+                                <subviews>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="zzW-HM-XD7">
+                                        <rect key="frame" x="0.0" y="93.6666666666667" width="353" height="218.33333333333337"/>
+                                        <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
+                                            <!--2037-12-31 11:00:00 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wnq-4c-RoY">
+                                        <rect key="frame" x="5" y="5" width="343" height="88.666666666666671"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qhf-qd-dIZ">
+                                                <rect key="frame" x="0.0" y="22.333333333333314" width="44" height="44"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="tintColor" name="layerTwo"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="close"/>
+                                                <connections>
+                                                    <action selector="closeDatePickerButtonPress:" destination="68T-gw-3fP" eventType="touchUpInside" id="vBG-Pq-d8q"/>
+                                                    <action selector="closePickerButtonPress:" destination="68T-gw-3fP" eventType="touchUpInside" id="wzA-N4-KrY"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ale-qn-MId">
+                                                <rect key="frame" x="144.66666666666666" y="31.333333333333314" width="54" height="25.666666666666671"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8p7-ky-7Pc">
+                                                <rect key="frame" x="299" y="22.333333333333314" width="44" height="44"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="tintColor" name="accentOne"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="tick">
+                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="selectDatePickerButtonPress:" destination="68T-gw-3fP" eventType="touchUpInside" id="13X-tg-0Dp"/>
+                                                    <action selector="selectPickerButtonPress:" destination="68T-gw-3fP" eventType="touchUpInside" id="nHd-08-WRT"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="cellBackground"/>
+                                <constraints>
+                                    <constraint firstItem="zzW-HM-XD7" firstAttribute="leading" secondItem="EIf-dA-kP7" secondAttribute="leading" id="16n-je-wn8"/>
+                                    <constraint firstItem="wnq-4c-RoY" firstAttribute="top" secondItem="EIf-dA-kP7" secondAttribute="top" constant="5" id="27e-Sh-eNe"/>
+                                    <constraint firstAttribute="trailing" secondItem="wnq-4c-RoY" secondAttribute="trailing" constant="5" id="7er-ab-jDI"/>
+                                    <constraint firstAttribute="bottom" secondItem="zzW-HM-XD7" secondAttribute="bottom" id="92J-CH-a5q"/>
+                                    <constraint firstItem="zzW-HM-XD7" firstAttribute="top" secondItem="wnq-4c-RoY" secondAttribute="bottom" id="Dqx-D1-a5M"/>
+                                    <constraint firstItem="wnq-4c-RoY" firstAttribute="leading" secondItem="EIf-dA-kP7" secondAttribute="leading" constant="5" id="Va8-Zp-h9R"/>
+                                    <constraint firstAttribute="trailing" secondItem="zzW-HM-XD7" secondAttribute="trailing" id="mz0-pg-3Ee"/>
+                                    <constraint firstItem="zzW-HM-XD7" firstAttribute="height" secondItem="EIf-dA-kP7" secondAttribute="height" multiplier="0.7" id="yjt-WX-VQH"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="byL-Wh-Sqf">
+                                <rect key="frame" x="0.0" y="519" width="393" height="333"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lS7-Vm-oPN">
+                                        <rect key="frame" x="10" y="15" width="373" height="102"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAh-Bv-fdi">
+                                                <rect key="frame" x="0.0" y="29" width="44" height="44"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="tintColor" name="layerTwo"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="close"/>
+                                                <connections>
+                                                    <action selector="closePickerButtonPress:" destination="68T-gw-3fP" eventType="touchUpInside" id="cGi-la-dgc"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URt-FY-Uw4">
+                                                <rect key="frame" x="159.66666666666666" y="38.333333333333371" width="54" height="25.666666666666671"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n97-qE-N3p">
+                                                <rect key="frame" x="329" y="29" width="44" height="44"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="tintColor" name="accentOne"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="tick">
+                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="selectPickerButtonPress:" destination="68T-gw-3fP" eventType="touchUpInside" id="daT-LZ-LgF"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eid-hP-D7j" userLabel="Picker1">
+                                        <rect key="frame" x="0.0" y="117" width="393" height="216"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="68T-gw-3fP" id="Adr-3O-lRQ"/>
+                                            <outlet property="delegate" destination="68T-gw-3fP" id="EVj-N2-T5L"/>
+                                        </connections>
+                                    </pickerView>
+                                    <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dnA-M1-vbR" userLabel="Picker2">
+                                        <rect key="frame" x="0.0" y="117" width="393" height="216"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="68T-gw-3fP" id="qo9-Yv-PVh"/>
+                                            <outlet property="delegate" destination="68T-gw-3fP" id="y3K-Yt-6CE"/>
+                                        </connections>
+                                    </pickerView>
+                                </subviews>
+                                <color key="backgroundColor" name="cellBackground"/>
+                                <constraints>
+                                    <constraint firstItem="lS7-Vm-oPN" firstAttribute="top" secondItem="byL-Wh-Sqf" secondAttribute="top" constant="15" id="AwB-O7-Zlk"/>
+                                    <constraint firstAttribute="bottom" secondItem="dnA-M1-vbR" secondAttribute="bottom" id="GiE-St-Nbc"/>
+                                    <constraint firstItem="eid-hP-D7j" firstAttribute="leading" secondItem="byL-Wh-Sqf" secondAttribute="leading" id="NMq-DA-lzy"/>
+                                    <constraint firstAttribute="trailing" secondItem="eid-hP-D7j" secondAttribute="trailing" id="Tgj-QU-EjT"/>
+                                    <constraint firstItem="eid-hP-D7j" firstAttribute="top" secondItem="lS7-Vm-oPN" secondAttribute="bottom" id="cLN-Df-QwW"/>
+                                    <constraint firstAttribute="bottom" secondItem="eid-hP-D7j" secondAttribute="bottom" id="cyU-3m-NMf"/>
+                                    <constraint firstAttribute="trailing" secondItem="lS7-Vm-oPN" secondAttribute="trailing" constant="10" id="fuP-cK-iMj"/>
+                                    <constraint firstItem="lS7-Vm-oPN" firstAttribute="leading" secondItem="byL-Wh-Sqf" secondAttribute="leading" constant="10" id="gbz-YJ-IfK"/>
+                                    <constraint firstItem="dnA-M1-vbR" firstAttribute="leading" secondItem="byL-Wh-Sqf" secondAttribute="leading" id="kSU-4r-3kS"/>
+                                    <constraint firstAttribute="trailing" secondItem="dnA-M1-vbR" secondAttribute="trailing" id="tHL-Ks-Jtr"/>
+                                    <constraint firstItem="dnA-M1-vbR" firstAttribute="top" secondItem="lS7-Vm-oPN" secondAttribute="bottom" id="w95-m6-MMj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GAc-RL-d7g"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TJP-Zf-XoW" firstAttribute="height" secondItem="DUn-DN-iUk" secondAttribute="height" multiplier="0.78" id="3HC-UK-U9r"/>
+                            <constraint firstItem="EIf-dA-kP7" firstAttribute="centerX" secondItem="DUn-DN-iUk" secondAttribute="centerX" id="4D8-EO-ySE"/>
+                            <constraint firstItem="GAc-RL-d7g" firstAttribute="bottom" secondItem="byL-Wh-Sqf" secondAttribute="bottom" constant="-34" id="B10-KK-Cwn"/>
+                            <constraint firstItem="TJP-Zf-XoW" firstAttribute="leading" secondItem="GAc-RL-d7g" secondAttribute="leading" id="BBV-M2-oZG"/>
+                            <constraint firstAttribute="bottom" secondItem="TJP-Zf-XoW" secondAttribute="bottom" id="EyY-7J-SPm"/>
+                            <constraint firstItem="GAc-RL-d7g" firstAttribute="trailing" secondItem="byL-Wh-Sqf" secondAttribute="trailing" id="HxD-Th-ldW"/>
+                            <constraint firstItem="byL-Wh-Sqf" firstAttribute="height" secondItem="TJP-Zf-XoW" secondAttribute="height" multiplier="0.45" constant="33.899999999999977" id="KZd-PZ-ygs"/>
+                            <constraint firstItem="TJP-Zf-XoW" firstAttribute="trailing" secondItem="GAc-RL-d7g" secondAttribute="trailing" id="R5e-vU-2g9"/>
+                            <constraint firstItem="EIf-dA-kP7" firstAttribute="width" secondItem="DUn-DN-iUk" secondAttribute="width" multiplier="0.898219" id="a70-0s-KD3"/>
+                            <constraint firstItem="GAc-RL-d7g" firstAttribute="trailing" secondItem="iap-NZ-0Dr" secondAttribute="trailing" constant="20" id="fPK-Zq-Ant"/>
+                            <constraint firstItem="EIf-dA-kP7" firstAttribute="centerY" secondItem="DUn-DN-iUk" secondAttribute="centerY" id="gQX-Zg-iCP"/>
+                            <constraint firstItem="GAc-RL-d7g" firstAttribute="bottom" secondItem="iap-NZ-0Dr" secondAttribute="bottom" constant="20" id="i5x-px-6Vf"/>
+                            <constraint firstItem="byL-Wh-Sqf" firstAttribute="leading" secondItem="GAc-RL-d7g" secondAttribute="leading" id="j7V-xG-YZ5"/>
+                            <constraint firstItem="EIf-dA-kP7" firstAttribute="height" secondItem="DUn-DN-iUk" secondAttribute="height" multiplier="0.366197" id="zKs-8v-tGU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fp7-E4-jKL"/>
+                    <connections>
+                        <outlet property="backgroundDatePicker" destination="EIf-dA-kP7" id="Hie-yn-kHY"/>
+                        <outlet property="backgroundDatePickerLabel" destination="ale-qn-MId" id="WPx-hV-GRK"/>
+                        <outlet property="backgroundPicker" destination="byL-Wh-Sqf" id="LX2-Mo-8Xh"/>
+                        <outlet property="backgroundPickerView" destination="byL-Wh-Sqf" id="Zlj-zK-Prn"/>
+                        <outlet property="cameraPicker" destination="eid-hP-D7j" id="cZN-Jc-esL"/>
+                        <outlet property="datePicker" destination="zzW-HM-XD7" id="oqT-Ec-aou"/>
+                        <outlet property="historyButton" destination="iap-NZ-0Dr" id="Mbh-zF-Uvx"/>
+                        <outlet property="marsDataTableView" destination="TJP-Zf-XoW" id="x3w-C1-JSS"/>
+                        <outlet property="pickerLabel" destination="URt-FY-Uw4" id="UNC-ds-cR8"/>
+                        <outlet property="roverPicker" destination="dnA-M1-vbR" id="CNu-fT-qTS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FBT-Z1-C4R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1965.6488549618321" y="3.5211267605633805"/>
+        </scene>
+        <!--View Photo View Controller-->
+        <scene sceneID="gbJ-9I-Xe8">
+            <objects>
+                <viewController storyboardIdentifier="ViewPhotoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1Wx-nr-VKG" customClass="ViewPhotoViewController" customModule="_0210" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VOW-g6-9dv">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tzf-Kn-9V3">
+                                <rect key="frame" x="0.0" y="109" width="393" height="709"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5L-Mh-96O">
+                                <rect key="frame" x="20" y="79" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="kU7-F8-8W8"/>
+                                    <constraint firstAttribute="width" constant="30" id="v4r-XR-4at"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="closeWhight"/>
+                                <connections>
+                                    <action selector="close:" destination="1Wx-nr-VKG" eventType="touchUpInside" id="GTl-c8-ifc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NJ4-wQ-AaM"/>
+                        <color key="backgroundColor" name="layerOne"/>
+                        <constraints>
+                            <constraint firstItem="C5L-Mh-96O" firstAttribute="top" secondItem="NJ4-wQ-AaM" secondAttribute="top" constant="20" id="1Ec-NO-zUJ"/>
+                            <constraint firstItem="C5L-Mh-96O" firstAttribute="leading" secondItem="NJ4-wQ-AaM" secondAttribute="leading" constant="20" id="9nP-n6-33R"/>
+                            <constraint firstItem="Tzf-Kn-9V3" firstAttribute="top" secondItem="C5L-Mh-96O" secondAttribute="bottom" id="DhY-cO-gXt"/>
+                            <constraint firstItem="Tzf-Kn-9V3" firstAttribute="leading" secondItem="NJ4-wQ-AaM" secondAttribute="leading" id="bku-GA-gcy"/>
+                            <constraint firstItem="Tzf-Kn-9V3" firstAttribute="trailing" secondItem="NJ4-wQ-AaM" secondAttribute="trailing" id="ryQ-I1-mR8"/>
+                            <constraint firstItem="Tzf-Kn-9V3" firstAttribute="bottom" secondItem="NJ4-wQ-AaM" secondAttribute="bottom" id="uOw-bC-EbH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="marsPhoto" destination="Tzf-Kn-9V3" id="9Zb-T9-BrY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sdc-zZ-6iD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3087.7862595419847" y="-1.4084507042253522"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close" width="44" height="44"/>
+        <image name="closeWhight" width="44" height="44"/>
+        <image name="history" width="44" height="44"/>
+        <image name="tick" width="44" height="44"/>
+        <namedColor name="accentOne">
+            <color red="0.9309999942779541" green="0.44999998807907104" blue="0.24699999392032623" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="cellBackground">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="layerOne">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="layerTwo">
+            <color red="0.62699997425079346" green="0.62699997425079346" blue="0.62699997425079346" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
