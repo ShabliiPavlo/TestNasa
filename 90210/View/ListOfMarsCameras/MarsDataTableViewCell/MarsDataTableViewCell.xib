@@ -20,7 +20,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SyG-Z3-gOp">
                         <rect key="frame" x="9.6666666666666572" y="27.666666666666671" width="353" height="150"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mokImage" translatesAutoresizingMaskIntoConstraints="NO" id="qFd-Sn-Rwb">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qFd-Sn-Rwb">
                                 <rect key="frame" x="213" y="10" width="130" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="ZmA-JG-lxt"/>
@@ -87,9 +87,8 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="mokImage" width="130" height="130"/>
         <namedColor name="backgroundOne">
-            <color red="0.96862739320000002" green="0.96862739320000002" blue="0.96862739320000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.96899998188018799" green="0.96899998188018799" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="cellBackground">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

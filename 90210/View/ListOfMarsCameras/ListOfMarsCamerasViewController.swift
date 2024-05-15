@@ -12,7 +12,7 @@ class ListOfMarsCamerasViewController: UIViewController {
     let seveFilterButton = UIButton()
     lazy var calendarButton = UIButton()
     let stackView = UIStackView()
-    let dateLabel = TitleLabel(text: "2016-05-12",
+    let dateLabel = TitleLabel(text: "May 12, 2016",
                                style: .secondBody)
     let tittleOfHeader = TitleLabel(text: "MARS.CAMERA",
                                     style: .largeTitle)
@@ -62,18 +62,22 @@ class ListOfMarsCamerasViewController: UIViewController {
         let alert = UIAlertController(title: "History",
                                       message: "",
                                       preferredStyle: .alert)
-        let cancelAction = UIAlertAction(title: "Cancel",
-                                         style: .cancel)
-        let toHistoryItems = UIAlertAction(title: "Revise", 
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        let toHistoryItems = UIAlertAction(title: "Revise",
                                            style: .destructive) { _ in
             let vc = ControllerFactory.testViewController(vcType: .items)
-            
+            vc.request = { model in
+                        self.viewModel.requestData(with: model)
+                    }
             self.navigationController?.pushViewController(vc, animated: true)
         }
 
         let toHistoryFilters = UIAlertAction(title: "Filters", style: .destructive) { _ in
-            let vc = ControllerFactory.testViewController(vcType: .filter)
             
+            let vc = ControllerFactory.testViewController(vcType: .filter)
+            vc.request = { model in
+                        self.viewModel.requestData(with: model)
+                    }
             self.navigationController?.pushViewController(vc, animated: true)
         }
 
@@ -130,7 +134,7 @@ class ListOfMarsCamerasViewController: UIViewController {
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let formattedDate = dateFormatter.string(for: datePicker.date)
         
-        dateLabel.text = formattedDate
+        dateLabel.text = formattedDate?.formatDate()
         viewModel.setDate(formattedDate)
     }
     
@@ -320,7 +324,6 @@ extension ListOfMarsCamerasViewController: UITableViewDelegate {
         viewModel.saveObjectToRealm(indexPath: indexPath)
         deteil.uiimage = cell.imageViewCell.image
         self.navigationController?.pushViewController(deteil, animated: true)
-
     }
 }
 

@@ -36,4 +36,13 @@ final class RealmManager {
         return realm?.objects(type)
     }
     
+    func deleteObject<T: Object>(_ object: T) {
+            do {
+                try realm?.write({
+                    realm?.delete(object)
+                })
+            } catch {
+                print("delete object error: \(error)")
+            }
+        }
 }

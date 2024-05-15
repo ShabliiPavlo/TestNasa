@@ -2,7 +2,7 @@
 import Foundation
 
 
- class TestViewModel {
+ class HistoryViewModel {
      weak var delegate: ListOfMarsCamerasViewModelProtocol?
     
     var realmManager: RealmManager
@@ -30,5 +30,22 @@ import Foundation
          }
          delegate?.reloadDataTable()
      }
+     
+     func deleteHistoryItem(at index: Int) {
+             switch vcType {
+             case .filter:
+                 if let objects = realmManager.readObjects(type: RealmFilterModel.self) {
+                     let objectToDelete = objects[index]
+                     realmManager.deleteObject(objectToDelete)
+                 }
+             case .items:
+                 if let objects = realmManager.readObjects(type: RealmItemModel.self) {
+                     let objectToDelete = objects[index]
+                     realmManager.deleteObject(objectToDelete)
+                 }
+             }
+             history.remove(at: index)
+             delegate?.reloadDataTable()
+         }
 }
 

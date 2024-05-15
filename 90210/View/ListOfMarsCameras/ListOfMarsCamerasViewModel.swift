@@ -67,7 +67,7 @@ extension ListOfMarsCamerasViewModel {
         requestData(camera: .All, rover: .curiosity, date: "2016-05-12")
     }
     
-    private func requestData(camera: Abbreviation, rover: RoverType, date: String?) {
+    func requestData(camera: Abbreviation, rover: RoverType, date: String?) {
         self.nasaManagerData.removeAll()
         networkManage.requestData(camera: camera, date: date ?? "2016-05-12", rover: rover, completion: { data in
             self.nasaManagerData.append(contentsOf: data.photos)
@@ -95,7 +95,7 @@ extension ListOfMarsCamerasViewModel {
 }
 
 extension ListOfMarsCamerasViewModel {
-    private func combineSub() {
+     func combineSub() {
         selectedCameraSubject
             .sink { cam in
                 self.requestData(camera: cam, rover: self.rover, date: self.date)
@@ -116,8 +116,13 @@ extension ListOfMarsCamerasViewModel {
                 
             }
             .store(in: &cancellables)
-        
     }
+    
+    func requestData(with model: HostoryCellModel) {
+           let camera = Abbreviation.allCases.first { $0.rawValue == model.camera } ?? .All
+           let rover = RoverType.allCases.first { $0.rawValue == model.rover } ?? .curiosity
+           requestData(camera: camera, rover: rover, date: model.date)
+       }
 }
 enum NetworkError: Error {
     case imageLoadingError

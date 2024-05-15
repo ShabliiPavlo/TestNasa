@@ -27,8 +27,8 @@
 		404AF6E82BF2ADDA007DCD7D /* AppLoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404AF6BF2BF2ADD9007DCD7D /* AppLoaderViewController.swift */; };
 		404AF6E92BF2ADDA007DCD7D /* ViewPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404AF6C12BF2ADD9007DCD7D /* ViewPhotoViewController.swift */; };
 		404AF6EA2BF2ADDA007DCD7D /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404AF6C32BF2ADD9007DCD7D /* TitleLabel.swift */; };
-		404AF6EB2BF2ADDA007DCD7D /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404AF6C52BF2ADD9007DCD7D /* TestViewModel.swift */; };
-		404AF6EC2BF2ADDA007DCD7D /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404AF6C62BF2ADD9007DCD7D /* TestViewController.swift */; };
+		404AF6EB2BF2ADDA007DCD7D /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404AF6C52BF2ADD9007DCD7D /* HistoryViewModel.swift */; };
+		404AF6EC2BF2ADDA007DCD7D /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404AF6C62BF2ADD9007DCD7D /* HistoryViewController.swift */; };
 		404AF6ED2BF2ADDA007DCD7D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404AF6C92BF2ADD9007DCD7D /* NetworkManager.swift */; };
 		404AF6EF2BF2ADDA007DCD7D /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404AF6CC2BF2ADD9007DCD7D /* RealmManager.swift */; };
 		404AF6F02BF2ADDA007DCD7D /* ControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404AF6CE2BF2ADD9007DCD7D /* ControllerFactory.swift */; };
@@ -43,6 +43,8 @@
 		404AF6F92BF2ADDA007DCD7D /* RealmItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404AF6DC2BF2ADDA007DCD7D /* RealmItemModel.swift */; };
 		404AF6FA2BF2ADDA007DCD7D /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404AF6DD2BF2ADDA007DCD7D /* NetworkModel.swift */; };
 		40CC7ED22BF35D170068F633 /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CC7ED12BF35D170068F633 /* ImageScrollView.swift */; };
+		40CC7ED62BF400D20068F633 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CC7ED42BF400D20068F633 /* HistoryTableViewCell.swift */; };
+		40CC7ED72BF400D20068F633 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40CC7ED52BF400D20068F633 /* HistoryTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,8 +60,8 @@
 		404AF6BF2BF2ADD9007DCD7D /* AppLoaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLoaderViewController.swift; sourceTree = "<group>"; };
 		404AF6C12BF2ADD9007DCD7D /* ViewPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPhotoViewController.swift; sourceTree = "<group>"; };
 		404AF6C32BF2ADD9007DCD7D /* TitleLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
-		404AF6C52BF2ADD9007DCD7D /* TestViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
-		404AF6C62BF2ADD9007DCD7D /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		404AF6C52BF2ADD9007DCD7D /* HistoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+		404AF6C62BF2ADD9007DCD7D /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		404AF6C92BF2ADD9007DCD7D /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		404AF6CC2BF2ADD9007DCD7D /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		404AF6CE2BF2ADD9007DCD7D /* ControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerFactory.swift; sourceTree = "<group>"; };
@@ -75,6 +77,8 @@
 		404AF6DD2BF2ADDA007DCD7D /* NetworkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
 		404AF6DE2BF2ADDA007DCD7D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40CC7ED12BF35D170068F633 /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
+		40CC7ED42BF400D20068F633 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		40CC7ED52BF400D20068F633 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +150,7 @@
 				404AF6BE2BF2ADD9007DCD7D /* Loader */,
 				404AF6C02BF2ADD9007DCD7D /* ViewPhotoScreen */,
 				404AF6C22BF2ADD9007DCD7D /* Reusable */,
-				404AF6C42BF2ADD9007DCD7D /* TestController */,
+				404AF6C42BF2ADD9007DCD7D /* HistoryScreen */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -202,13 +206,14 @@
 			path = Reusable;
 			sourceTree = "<group>";
 		};
-		404AF6C42BF2ADD9007DCD7D /* TestController */ = {
+		404AF6C42BF2ADD9007DCD7D /* HistoryScreen */ = {
 			isa = PBXGroup;
 			children = (
-				404AF6C52BF2ADD9007DCD7D /* TestViewModel.swift */,
-				404AF6C62BF2ADD9007DCD7D /* TestViewController.swift */,
+				40CC7ED32BF400850068F633 /* HistoryTableViewCell */,
+				404AF6C52BF2ADD9007DCD7D /* HistoryViewModel.swift */,
+				404AF6C62BF2ADD9007DCD7D /* HistoryViewController.swift */,
 			);
-			path = TestController;
+			path = HistoryScreen;
 			sourceTree = "<group>";
 		};
 		404AF6C72BF2ADD9007DCD7D /* managers */ = {
@@ -290,6 +295,15 @@
 				404AF6DC2BF2ADDA007DCD7D /* RealmItemModel.swift */,
 			);
 			path = Realm;
+			sourceTree = "<group>";
+		};
+		40CC7ED32BF400850068F633 /* HistoryTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				40CC7ED42BF400D20068F633 /* HistoryTableViewCell.swift */,
+				40CC7ED52BF400D20068F633 /* HistoryTableViewCell.xib */,
+			);
+			path = HistoryTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,6 +388,7 @@
 				404AF6E22BF2ADDA007DCD7D /* MarsDataTableViewCell.xib in Resources */,
 				404AF6F32BF2ADDA007DCD7D /* Assets.xcassets in Resources */,
 				404AF6E52BF2ADDA007DCD7D /* Main.storyboard in Resources */,
+				40CC7ED72BF400D20068F633 /* HistoryTableViewCell.xib in Resources */,
 				404AF6F42BF2ADDA007DCD7D /* loader.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,10 +404,11 @@
 				404AF6DF2BF2ADDA007DCD7D /* AppDelegate.swift in Sources */,
 				404AF6FA2BF2ADDA007DCD7D /* NetworkModel.swift in Sources */,
 				404AF6E02BF2ADDA007DCD7D /* SceneDelegate.swift in Sources */,
-				404AF6EC2BF2ADDA007DCD7D /* TestViewController.swift in Sources */,
-				404AF6EB2BF2ADDA007DCD7D /* TestViewModel.swift in Sources */,
+				404AF6EC2BF2ADDA007DCD7D /* HistoryViewController.swift in Sources */,
+				404AF6EB2BF2ADDA007DCD7D /* HistoryViewModel.swift in Sources */,
 				404AF6F12BF2ADDA007DCD7D /* Extensiions.swift in Sources */,
 				404AF6EF2BF2ADDA007DCD7D /* RealmManager.swift in Sources */,
+				40CC7ED62BF400D20068F633 /* HistoryTableViewCell.swift in Sources */,
 				404AF6F22BF2ADDA007DCD7D /* Fonts.swift in Sources */,
 				404AF6F82BF2ADDA007DCD7D /* RealmFilterModel.swift in Sources */,
 				404AF6E42BF2ADDA007DCD7D /* ListOfMarsCamerasViewModel.swift in Sources */,

@@ -4,14 +4,14 @@ import Foundation
 protocol ControllerFactoryProtocol  {
     static func listOfMarsViewController() -> ListOfMarsCamerasViewController
     static func appLoaderViewController() -> AppLoaderViewController
-    static func testViewController(vcType: HistoryType) -> TestViewController
+    static func testViewController(vcType: HistoryType) -> HistoryViewController
 }
 
 final class ControllerFactory: ControllerFactoryProtocol {
-    static func testViewController(vcType: HistoryType) -> TestViewController {
+    static func testViewController(vcType: HistoryType) -> HistoryViewController {
         let realm = RealmManager()
-        let viewModel = TestViewModel(realmManager: realm, type: vcType)
-        return TestViewController(testViewModel: viewModel)
+        let viewModel = HistoryViewModel(realmManager: realm, type: vcType)
+        return HistoryViewController(testViewModel: viewModel)
     }
     
     static func appLoaderViewController() -> AppLoaderViewController {

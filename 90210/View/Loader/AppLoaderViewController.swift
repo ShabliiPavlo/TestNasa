@@ -17,7 +17,6 @@ class AppLoaderViewController: UIViewController {
 
             self.view.window?.rootViewController = UINavigationController(rootViewController: vc)
             self.view.window?.makeKeyAndVisible()
-            
         }
     }
     

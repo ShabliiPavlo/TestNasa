@@ -66,7 +66,7 @@ extension MarsDataTableViewCell {
             .font: UIFont(name: "SFPro-Regular", size: 16) as Any,
             .foregroundColor: UIColor.layerTwo
         ])
-        attributedTextDay.append(NSAttributedString(string: day, attributes: [
+        attributedTextDay.append(NSAttributedString(string: day.formatDate() ?? day, attributes: [
             .font: UIFont(name: "SFPro-Bold", size: 17) as Any,
             .foregroundColor: UIColor.layerOne
         ]))
@@ -85,6 +85,5 @@ extension MarsDataTableViewCell {
         camera.attributedText = attributedText
     }
 }
-
 
 
